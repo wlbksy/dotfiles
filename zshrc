@@ -25,20 +25,20 @@ if [[ "$TERM" == "xterm-256color" ]]; then
     bindkey "\e[F" end-of-line
 fi
 
-export LD_LIBRARY_PATH=/usr/local/lib/gcc/6/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/include/c++/6.3.0:$HOME/miniconda3/include/:$HOME/miniconda3/include/python3.5m/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=/usr/local/lib/gcc/8/:/opt/OpenBLAS/lib:/usr/local/opt/opencv3/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/usr/local/include/c++/8.1.0:/opt/OpenBLAS/include:/usr/local/opt/opencv3/include:$HOME/miniconda3/include/:$HOME/miniconda3/include/python3.6m/:$C_INCLUDE_PATH
+export PKG_CONFIG_PATH=/usr/local/opt/opencv3/lib/pkgconfig
 
-export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/bin:/usr/local/opt/openssl/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+export PKG_CONFIG_PATH='/usr/local/opt/opencv3/lib/pkgconfig'
 
 alias grep='grep --color=auto'
 
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
 alias ll='ls --color=auto -ahl'
-
-alias vi='vim'
 
 export PAGER='less -R -s -i'
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -49,10 +49,15 @@ export LESS_TERMCAP_so=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;34m'
 
-export PATH="/usr/local/texlive/2016/bin/x86_64-darwin:$PATH"
+export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 
-alias cc='g++ -std=c++1z -Wall'
+export GOPATH=$HOME/codes/gopath
+export PATH="/usr/local/opt/opencv3/bin:/Users/wanglei/miniconda3/bin:$PATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+export PATH=~/CRClientTools/arcanist/bin:$PATH;
+export ARCDIR=~/CRClientTools/arcanist/bin;
 
-export PATH="/Users/wanglei/miniconda3/bin:$PATH"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+alias CC='gcc -std=c++1z -Wall'
+alias CXX='g++ -std=c++1z -Wall'
 
+alias webgpu0='ssh -N -f -L localhost:8765:localhost:8765 luban@10.84.176.52 -p 8022'
