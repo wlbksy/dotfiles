@@ -4,13 +4,12 @@ fi
 
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[01;35m\]\D{%m-%d %T}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
-alias vi=vim
-
 alias ls='ls -h --color=auto'
 alias la='ls -a'
 alias ll='la -l'
 
 alias grep='grep --color=auto'
+alias less='less -R'
 
 export PAGER='less -R -s -i'
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -21,24 +20,15 @@ export LESS_TERMCAP_so=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;34m'
 
-export LD_LIBRARY_PATH=/usr/local/lib/gcc/6/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/include/c++/6.3.0:/usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/x86_64-apple-darwin16.3.0:$HOME/miniconda3/include/:$HOME/miniconda3/include/python3.6m/:$C_INCLUDE_PATH
+export LD_LIBRARY_PATH=/usr/local/lib/gcc/8/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/usr/local/include/c++/8.1.0:$C_INCLUDE_PATH
 
 export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH
 
-export CC=/usr/local/bin/gcc-6
-export CXX=/usr/local/bin/g++-6
+export CC=/usr/local/bin/gcc-8
+export CXX=/usr/local/bin/g++-8
 
 export PATH="/usr/local/opt/openssl/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
-
-alias cc='g++ -std=c++1z -Wall'
-
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-export GOPATH=$HOME/codes/gotest
-
-alias webgpu0='ssh -N -f -L localhost:8768:localhost:8888 wangleianarch@10.91.42.231 -p 8022'
-alias webgpu1='ssh -N -f -L localhost:8768:localhost:8888 wangleianarch@10.84.139.199 -p 8022'
+alias cc='g++ -std=c++2a -Wall'
