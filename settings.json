@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "editor.trimAutoWhitespace": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "files.encoding": "utf8",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss.SSS",
+    "gitlens.defaultDateStyle": "absolute",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "explorer.confirmDelete": false,
+}
