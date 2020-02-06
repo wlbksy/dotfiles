@@ -25,14 +25,14 @@ if [[ "$TERM" == "xterm-256color" ]]; then
     bindkey "\e[F" end-of-line
 fi
 
-export LD_LIBRARY_PATH=/usr/local/lib/gcc/8/:/opt/OpenBLAS/lib:/usr/local/opt/opencv3/lib:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/include/c++/8.2.0:/opt/OpenBLAS/include:/usr/local/opt/opencv3/include:$HOME/miniconda3/include/:$HOME/miniconda3/include/python3.6m/:$C_INCLUDE_PATH
-export PKG_CONFIG_PATH=/usr/local/opt/opencv3/lib/pkgconfig
+export LD_LIBRARY_PATH=/usr/local/lib/gcc/9/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/usr/local/include/c++/9.2.0:$C_INCLUDE_PATH
 
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
-export PKG_CONFIG_PATH=/usr/local/opt/opencv3/lib/pkgconfig
+export PATH=/usr/local/bin:$PATH
+export PATH=~/miniconda3/bin:$PATH
 
 alias grep='grep --color=auto'
 
@@ -50,4 +50,9 @@ export LESS_TERMCAP_so=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;34m'
 
-alias CC='g++ -std=c++2a -Wall'
+alias CC='/usr/local/bin/g++-9 -std=c++2a -Wall'
+
+export JAVA_HOME=`/usr/libexec/java_home`
+
+export PATH=$JAVA_HOME/bin:$PATH
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
