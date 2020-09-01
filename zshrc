@@ -25,16 +25,6 @@ if [[ "$TERM" == "xterm-256color" ]]; then
     bindkey "\e[F" end-of-line
 fi
 
-export LD_LIBRARY_PATH=/usr/local/lib/gcc/9/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/include/c++/9.2.0:$C_INCLUDE_PATH
-
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-
-export PATH=/usr/local/bin:$PATH
-export PATH=~/miniconda3/bin:$PATH
-
-alias grep='grep --color=auto'
 
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
@@ -50,9 +40,15 @@ export LESS_TERMCAP_so=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;34m'
 
-alias CC='/usr/local/bin/g++-9 -std=c++2a -Wall'
+export LD_LIBRARY_PATH=/usr/local/lib/gcc/10/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/usr/local/include/c++/10.2.0:$C_INCLUDE_PATH
 
-export JAVA_HOME=`/usr/libexec/java_home`
+export CC=/usr/local/bin/gcc-10
+export CXX=/usr/local/bin/g++-10
 
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+
+export PATH=~/miniconda3/bin:$PATH
+
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
