@@ -40,12 +40,6 @@ export LESS_TERMCAP_so=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;34m'
 
-export LD_LIBRARY_PATH=/usr/local/lib/gcc/10/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/include/c++/10.2.0:$C_INCLUDE_PATH
-
-export CC=/usr/local/bin/gcc-10
-export CXX=/usr/local/bin/g++-10
-
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
